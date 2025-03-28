@@ -4,14 +4,14 @@ public class Cadastrouser {
    private int id_user;
    private String name;
    private int age;
-   private char cpf;
-   private char tell; //new
+   private double cpf; // tentando
+   private int tell; //new
    private String email;
    private String senha; //new
    
 
 
-public Cadastrouser(String name, int idade, char cepefe, char fone, String meil, String pass){
+public Cadastrouser(String name, int idade, double cepefe, int fone, String meil, String pass){
     this.name = name;
     this.age = idade;
     this.cpf = cepefe;
@@ -28,12 +28,12 @@ public void Login(){
 
 
    //////////////////////////////////////
-   public char getTell() {
+   public int getTell() {
        return tell;
    }
 
-   public void setTell(char tell) {
-       this.tell = tell;
+   public void setTell(int fonee) {
+       this.tell = fonee;
    }
 
 //////////////////////////////////////////
@@ -57,7 +57,7 @@ public void setAge(int age) {
 
 //////////////////////////////////////////////
 
-public char getCpf() {
+public double getCpf() {
     return cpf;
 }
 public void setCpf(char cpf) {
