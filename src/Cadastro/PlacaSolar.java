@@ -1,13 +1,15 @@
 package Cadastro;
 
 public class PlacaSolar {
-private String pot;
-private String efi;
-private String temp;
-private String tensao;
+private String pot; //potencia
+private String efi; // eficiencia
+private String temp; // temperatura
+private String tensao; 
 private String corrente;
-private String tpfuncdiario;
+private String tpfuncdiario; // tempo de funcionamento diario
 private String status;
+
+
 
 public String getCorrente() {
     return corrente;
