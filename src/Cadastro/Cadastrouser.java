@@ -10,7 +10,7 @@ public class Cadastrouser {
    private String senha; //new
    
 
-
+// construtor do cadastro de usuario
 public Cadastrouser(String name, int idade, double cepefe, int fone, String meil, String pass){
     this.name = name;
     this.age = idade;
@@ -21,13 +21,13 @@ public Cadastrouser(String name, int idade, double cepefe, int fone, String meil
 
 }
 
-
+// metodo não iniciado
 public void Login(){
     
 }
 
 
-   //////////////////////////////////////
+   /////////////////GETTERS E SETTERS/////////////////////
    public int getTell() {
        return tell;
    }
@@ -80,6 +80,8 @@ public void setSenha(String senha) {
 }
 ///////////////////////////////////////
 
+
+// metodo para imprimir dados
 public void imprimirDados(){
     System.out.println("Name: " + name);
     System.out.println("Age: " + age);

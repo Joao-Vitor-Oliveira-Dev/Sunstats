@@ -13,6 +13,8 @@ public class CadAparelho {
     private String consMensal;
     private double custEst;
 
+
+    // construtorr
     public CadAparelho (int idzin, String marcazin, String modelin, String medtimeonzin,
     String potz,
     String tensaozinha,
@@ -31,7 +33,7 @@ public class CadAparelho {
         this.custEst = custEstozin;
         
     }
-
+/////////////////////////////////////
 
 
 

@@ -1,24 +1,60 @@
 package Cadastro;
 
 public class CadEnd {
-    private char cep;
+    private String cep;
    private String bairro;
    private int numcasa;
    private String rua;
    private String compl;
-   private String com;
+   private int com;
+
    
+   // construtorr
+public void CadEnd (String cep, String bairro, int numcasa, String rua){
+    this.cep = cep;
+    this.bairro = bairro;
+    this.numcasa = numcasa;
+    this.rua = rua;
+}
+//////////////////////
 
 
-public String ExibeDados(String neighborr, String street, int num ){
-    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa;
 
+
+// metodo 1
+public void atualizaDados (String cepzin, String neighborr, int num, String street  ){
+ 
+    this.cep = cepzin;
+ this.bairro = neighborr;
+   this.numcasa = num;
+    this.rua = street;
+} 
+ ///////////////////
+ 
+
+
+//// metodo 2
+ public String ExibeDados(){
+return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa;
+}
+///////////
+
+
+/// sobrecarga 1
+public String ExibeDados(int quantCom){
+    this.com = quantCom;
+    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + "Comodos na casa: " + quantCom;
+}
+/////////////////////
+
+
+
+///// sobrecarga 1.1
+public String ExibeDados(String complemento){
+    this.compl = complemento;
+    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + "Comodos na casa: " + com + ", " + "complememto: "+ complemento;
 }
 
-public String ExibeDados(String quantCom){
-    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + "Comodos na casa: " + com  ;
-
-}
 
 
 
@@ -33,11 +69,11 @@ public String ExibeDados(String quantCom){
    }
 
    /////////////////////////////
-    public char getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(char cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
