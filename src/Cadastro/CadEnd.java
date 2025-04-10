@@ -10,7 +10,7 @@ public class CadEnd {
 
    
    // construtorr
-public void CadEnd (String cep, String bairro, int numcasa, String rua){
+public CadEnd (String cep, String bairro, int numcasa, String rua){
     this.cep = cep;
     this.bairro = bairro;
     this.numcasa = numcasa;

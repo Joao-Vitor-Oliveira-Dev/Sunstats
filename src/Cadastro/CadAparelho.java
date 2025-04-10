@@ -15,7 +15,7 @@ public class CadAparelho {
 
 
     // construtorr
-    public CadAparelho (int idzin, String marcazin, String modelin, String medtimeonzin,
+    public CadAparelho (int idzin, String descri, String marcazin, String modelin, String medtimeonzin,
     String potz,
     String tensaozinha,
     int pic_timezin,
@@ -23,6 +23,7 @@ public class CadAparelho {
     double custEstozin){
 
         this.id = idzin;
+        this.desc = descri;
         this.marca = marcazin;
         this.model = modelin;
         this.medtimeon = medtimeonzin;
@@ -35,6 +36,15 @@ public class CadAparelho {
     }
 /////////////////////////////////////
 
+
+public String exibeAp(){
+    return "Nome: " + desc + ", Marca: " + marca + ", Modelo: " + model + ", Tempo médio ligado: " + medtimeon ;
+
+}
+
+public String exibeAp(Double price){
+    return "Nome: " + desc + ", Marca: " + marca + ", Modelo: " + model + ", Tempo médio ligado: " + medtimeon + ", Preço: " + price;
+}
 
 
 }
