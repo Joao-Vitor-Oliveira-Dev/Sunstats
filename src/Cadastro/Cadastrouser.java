@@ -63,7 +63,11 @@ public int getAge() {
     return age;
 }
 public void setAge(int age) {
-    this.age = age;
+    if (age < 0) {
+        throw new IllegalArgumentException("Idade não pode ser negativa.");
+    }
+
+    this.idade = age;
 }
 
 //////////////////////////////////////////////
