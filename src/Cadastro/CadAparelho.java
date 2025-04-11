@@ -34,16 +34,22 @@ public class CadAparelho {
         this.custEst = custEstozin;
         
     }
-/////////////////////////////////////
+//////////////////////////////////////// 
+public double gastoEnergia(){     /// metodo que retorna o gasto de pot do ap
 
+    double valorgasto = (this.pot * this.medtimeon)/1000;
 
-public String exibeAp(){
+    System.out.println("Este aparelho gasta em média: " + valorgasto);
+    return valorgasto;
+}
+
+public String exibeAp(){ 
     return "Nome: " + desc + ", Marca: " + marca + ", Modelo: " + model + ", Tempo médio ligado: " + medtimeon ;
 
 }
 
-public String exibeAp(Double price){
-    return "Nome: " + desc + ", Marca: " + marca + ", Modelo: " + model + ", Tempo médio ligado: " + medtimeon + ", Preço: " + price;
+public String exibeAp(String ano) {         /// sobrecarga q puxa o metodo e adiciona a info de que ano o ap é
+    return exibeAp() + ", Ano: " + ano;
 }
 
 
