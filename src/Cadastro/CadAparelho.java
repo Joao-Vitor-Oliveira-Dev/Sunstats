@@ -9,8 +9,7 @@ public class CadAparelho {
     private String medtimeon;
     private String pot;
     private String tensao;
-    private int pic_time;
-    private String consMensal;
+    private String consMensal; // teremos que remover
     private double custEst;
 
 
@@ -18,7 +17,6 @@ public class CadAparelho {
     public CadAparelho (int idzin, String descri, String marcazin, String modelin, String medtimeonzin,
     String potz,
     String tensaozinha,
-    int pic_timezin,
     String consMensalzin,
     double custEstozin){
 
