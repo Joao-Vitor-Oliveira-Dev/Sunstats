@@ -6,16 +6,18 @@ public class CadAparelho {
     private String desc;
     private String marca;
     private String model;
-    private String medtimeon;
-    private String pot;
+    private Double medtimeon;
+    private int pot;
     private String tensao;
+    private String pic_time;
     private String consMensal; // teremos que remover
     private double custEst;
 
 
     // construtorr
-    public CadAparelho (int idzin, String descri, String marcazin, String modelin, String medtimeonzin,
-    String potz,
+    public CadAparelho (int idzin, String descri, String marcazin, String modelin, Double medtimeonzin,
+    int potz,
+    String pic_timezin,
     String tensaozinha,
     String consMensalzin,
     double custEstozin){
