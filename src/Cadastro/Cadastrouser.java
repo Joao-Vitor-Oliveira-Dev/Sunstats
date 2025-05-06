@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Cadastrouser {
    private int id_user;
    private String name;
-   private int age;
+   private date nasc;
    private String cpf; 
    private int tell; //new
    private String email;
@@ -15,9 +15,9 @@ public class Cadastrouser {
    
 
 // construtor do cadastro de usuario
-public Cadastrouser(String name, int idade, String cepefe, int fone, String meil, String pass){
+public Cadastrouser(String name, date nasc, String cepefe, int fone, String meil, String pass){
     setName(name);
-    this.age = idade;
+    this.nasc = nasc;
     setCpf(cepefe);
     this.tell = fone;
     setEmail(meil);
@@ -60,14 +60,10 @@ public void Login(){
 //////////////////////////////////////////
 
 public int getAge() {
-    return age;
+    return nasc;
 }
-public void setAge(int age) {
-    if (age < 0) {
-        throw new IllegalArgumentException("Idade não pode ser negativa.");
-    }
-
-    this.idade = age;
+public void setNasc(date nasc) {
+    this.nasc = nasc;
 }
 
 //////////////////////////////////////////////

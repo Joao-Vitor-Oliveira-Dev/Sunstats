@@ -1,39 +1,40 @@
 package Cadastro;
 
 public class PlacaSolar {
-private String pot; //potencia
-private String efi; // eficiencia
-private String temp; // temperatura
-private String tensao; 
-private String corrente;
-private String tpfuncdiario; // tempo de funcionamento diario
+private double pot; //potencia
+private double efi; // eficiencia 
+private double tensao; 
+private double corrente;
+private double tpfuncdiario; // tempo de funcionamento diario
 private String status;
+private double area;
+private double irradiacao;
 
 
 
-public String getCorrente() {
+public double getCorrente() {
     return corrente;
 }
 
-public void setCorrente(String corrente) {
+public void setCorrente(double corrente) {
     this.corrente = corrente;
 }
 
 
-public String getEfi() {
+public double getEfi() {
     return efi;
 }
 
-public void setEfi(String efi) {
+public void setEfi(double efi) {
     this.efi = efi;
 }
 
 
-public String getPot() {
+public double getPot() {
     return pot;
 }
 
-public void setPot(String pot) {
+public void setPot(double pot) {
     this.pot = pot;
 }
 
@@ -45,29 +46,29 @@ public void setStatus(String status) {
     this.status = status;
 }
 
-public String getTemp() {
-    return temp;
+public double getArea() {
+    return area;
 }
-public void setTemp(String temp) {
-    this.temp = temp;
+public void setArea(double area) {
+    this.area = area;
 }
 
 
-public String getTensao() {
+public double getTensao() {
     return tensao;
 }
 
 
-public void setTensao(String tensao) {
+public void setTensao(double tensao) {
     this.tensao = tensao;
 }
 
-public String getTpfuncdiario() {
+public double getTpfuncdiario() {
     return tpfuncdiario;
 }
 
 
-public void setTpfuncdiario(String tpfuncdiario) {
+public void setTpfuncdiario(double tpfuncdiario) {
     this.tpfuncdiario = tpfuncdiario;
 }
 

@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("Eae seus porr4 !");
 
-        Cadastrouser pessoa = new Cadastrouser("Luanliindo", 32, 437.234, 1999645-1411, "luanpipinelas@hotmail.com", "Luan2332");
+        Cadastrouser pessoa = new Cadastrouser(null, 0, null, 0, null, null)
 
 CadEnd endpessoa = new CadEnd("16 678-946", "Jardim Cândida", 89, "Cidadela");
 
