@@ -14,12 +14,14 @@ private double irradiacao;
 public Double calculaPotenciaGerada(double tensao, double corrente){
  this.tensao = tensao;
  this.corrente = corrente;
-return tensao * corrente;
+return  tensao * corrente;
 }
+
+
 ///////////////////////////////////////////
 public Double Pin(double irradiacao, double area){
     this.area = area;
-    this.irradiacao = area;
+    this.irradiacao = irradiacao;
 
     return irradiacao * area;
 }
@@ -31,14 +33,18 @@ public void calculaEficiencia(){
 
 }
 
+///////////////////////////////////////
+
+public void exibeCalculoDeEficiencia(){
+    System.out.println("A Potência Gerada é de:\n" + calculaPotenciaGerada(tensao, corrente));
+    System.out.println("O Pin Gerado é de: \n" + Pin(irradiacao, area));
+    System.out.println("A Eficiência real da sua placa é de: \n" + this.efi);
+}
 
 
 
 
-
-
-
-/****************GETTERSS E SETTERSS ******************* */
+/****************getters e setters ******************* */
 public double getCorrente() {
     return corrente;
 }
