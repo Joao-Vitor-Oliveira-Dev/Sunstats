@@ -2,7 +2,6 @@ package Cadastro;
 
 public class CadAparelho {
 
-    private int id;
     private String desc;
     private String marca;
     private String model;
@@ -15,14 +14,14 @@ public class CadAparelho {
 
 
     // construtorr
-    public CadAparelho (int idzin, String descri, String marcazin, String modelin, Double medtimeonzin,
+    public CadAparelho ( String descri, String marcazin, String modelin, Double medtimeonzin,
     int potz,
     String pic_timezin,
     String tensaozinha,
     String consMensalzin,
     double custEstozin){
 
-        this.id = idzin;
+
         this.desc = descri;
         this.marca = marcazin;
         this.model = modelin;
@@ -53,4 +52,18 @@ public String exibeAp(String ano) {         /// sobrecarga q puxa o metodo e adi
 }
 
 
+/*    private String desc;
+    private String marca;
+    private String model;
+    private Double medtimeon;
+    private int pot;
+    private String tensao;
+    private String pic_time;
+    private String consMensal; // teremos que remover
+    private double custEst;
+*/
+get
+
+
 }
+

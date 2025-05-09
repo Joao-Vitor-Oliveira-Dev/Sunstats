@@ -1,13 +1,17 @@
 package Cadastro;
-
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class Cadastrouser {
    private int id_user;
    private String name;
-   private int age;
+   private int dia; // new
+   private int mes; // new
+   private int ano; // new
+   private int idadeCalculada;
    private String cpf; 
-   private int tell; //new
+   private double tell; //new
    private String email;
    private String senha; //new
 
@@ -15,17 +19,28 @@ public class Cadastrouser {
    
 
 // construtor do cadastro de usuario
-public Cadastrouser(String name, int idade, String cepefe, int fone, String meil, String pass){
+public Cadastrouser(String name, int dia, int mes, int ano, String cepefe, double fone, String meil, String pass){
     setName(name);
-    this.age = idade;
+    setDia(dia);
+    setMes(mes);
+    setAno(ano);
     setCpf(cepefe);
-    this.tell = fone;
+    setTell(fone);
     setEmail(meil);
     this.senha = pass;
 
     this.historicoAparelhos = new ArrayList<>();
 
 }
+///////////*******METODOSSSS*********/////////////
+
+public void converteIdade(int dia, int mes, int ano){
+    LocalDate nascimento = LocalDate.of (ano,  mes,  dia);
+    LocalDate hoje = LocalDate.now();
+    Period idade = Period.between(nascimento, hoje);
+    this.idadeCalculada = idade.getYears();
+}
+
 
 // metodo não iniciado
 public void Login(){
@@ -34,11 +49,11 @@ public void Login(){
 
 
    /////////////////GETTERS E SETTERS/////////////////////
-   public int getTell() {
+   public double getTell() {
        return tell;
    }
 
-   public void setTell(int fonee) {
+   public void setTell(double fonee) {
        this.tell = fonee;
    }
 
@@ -57,33 +72,21 @@ public void Login(){
      
    }
 
-//////////////////////////////////////////
-
-public int getAge() {
-    return age;
-}
-public void setAge(int age) {
-    if (age < 0) {
-        throw new IllegalArgumentException("Idade não pode ser negativa.");
-    }
-
-    this.idade = age;
-}
-
 //////////////////////////////////////////////
 
-public String getCpf() {
-    return cpf;
-}
-
-public void setCpf(String cpf) {  // validação de cpf
-    int tamanhocpf = this.cpf.length();
-    if (tamanhocpf == 11){
-        this.cpf = cpf;  
-    }else{
-        System.err.println("CPF inválido. Seu CPF deve conter 11 dígitos");
+public void setCpf(String cpf) {
+    if (cpf != null) {
+        cpf = cpf.replace(".", "").replace("-", "");
+        if (cpf.length() == 11) {
+            this.cpf = cpf;
+        } else {
+            System.err.println("CPF inválido. Seu CPF deve conter 11 dígitos.");
+        }
+    } else {
+        System.err.println("CPF não pode ser nulo.");
     }
 }
+
 //////////////////////////////////////////////
 
 public String getEmail() {
@@ -99,7 +102,34 @@ public void setEmail(String email) {      // validação de email
     
 }
 /////////////////////////////////////////////
+public int getDia() {
+    return dia;
+}
+public void setDia(int dia) {
+    this.dia = dia;
+}
+/////////////////////////////////////////////
+public int getMes() {
+    return mes;
+}
+public void setMes(int mes) {
+    this.mes = mes;
+}
+/////////////////////////////////////////////
 
+public int getAno() {
+    return ano;
+}
+public void setAno(int ano) {
+    this.ano = ano;
+}
+/////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////
 public String getSenha() {
     return senha;
 }
@@ -132,7 +162,7 @@ public void setSenha(String senha) { // validaçao de senha
 // metodo para imprimir dados
 public void imprimirDados(){
     System.out.println("Name: " + name);
-    System.out.println("Age: " + age);
+    System.out.println("idade " + idadeCalculada);
     System.out.println("Email: " + email);
 
 }
