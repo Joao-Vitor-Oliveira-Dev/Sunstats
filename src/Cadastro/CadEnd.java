@@ -39,11 +39,7 @@ return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa;
 ///////////
 
 
-/// sobrecarga 1
-public String ExibeDados(int quantCom){
-    this.com = quantCom;
-    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + "Comodos na casa: " + quantCom;
-}
+
 /////////////////////
 
 
@@ -51,7 +47,7 @@ public String ExibeDados(int quantCom){
 ///// sobrecarga 1.1
 public String ExibeDados(String complemento){
     this.compl = complemento;
-    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + "Comodos na casa: " + com + ", " + "complememto: "+ complemento;
+    return "Bairro: " + bairro + ", " + "Rua: " + rua + ", " + "Numero: " + numcasa + ", " + ", " + "complememto: "+ complemento;
 }
 
 

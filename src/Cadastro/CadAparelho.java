@@ -62,7 +62,7 @@ public String exibeAp(String ano) {         /// sobrecarga q puxa o metodo e adi
     private String consMensal; // teremos que remover
     private double custEst;
 */
-get
+
 
 
 }

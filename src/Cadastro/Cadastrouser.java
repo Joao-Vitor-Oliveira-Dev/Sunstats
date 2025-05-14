@@ -6,12 +6,13 @@ import java.util.ArrayList;
 public class Cadastrouser {
    private int id_user;
    private String name;
-   private int dia; 
-   private int mes; 
-   private int ano; 
-   private int idadeCalculada;
-   private String cpf; 
-   private String tell; //mudado para String
+private int dia; 
+private int mes; 
+private int ano; 
+private int idadeCalculada;
+private String cpf; 
+private String tell; //mudado para String
+
    private String email;
    private String senha; 
 
@@ -19,7 +20,7 @@ public class Cadastrouser {
    
 
 // construtor do cadastro de usuario
-public Cadastrouser(String name, int dia, int mes, int ano, String cepefe, double fone, String meil, String pass){
+public Cadastrouser(String name, int dia, int mes, int ano, String cepefe, String fone, String meil, String pass){
     setName(name);
     setDia(dia);
     setMes(mes);
@@ -49,11 +50,11 @@ public void Login(){
 
 
    /////////////////GETTERS E SETTERS/////////////////////
-   public double getTell() {
+   public String getTell() {
        return tell;
    }
 
-   public void setTell(double fonee) {
+   public void setTell(String fonee) {
        this.tell = fonee;
    }
 
