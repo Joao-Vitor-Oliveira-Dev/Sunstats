@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public class Cadastrouser {
    private int id_user;
    private String name;
-   private int dia; // new
-   private int mes; // new
-   private int ano; // new
+   private int dia; 
+   private int mes; 
+   private int ano; 
    private int idadeCalculada;
    private String cpf; 
-   private double tell; //new
+   private String tell; //mudado para String
    private String email;
-   private String senha; //new
+   private String senha; 
 
    private ArrayList<CadAparelho> historicoAparelhos;
    

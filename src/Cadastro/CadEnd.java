@@ -6,7 +6,6 @@ public class CadEnd {
    private int numcasa;
    private String rua;
    private String compl;
-   private int com;
 
    
    // construtorr
